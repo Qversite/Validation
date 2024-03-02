@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+<body>
+    <form action="#" th:object="${userDto}" method="post">
+        <label>Логин: </label><br>
+        <input type="text" th:field="*{username}"/><br>
+        <span th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Username error</span><br>
+        <label>Пароль: </label><br>
+        <input type="text"/><br>
+        <label>Имя: </label><br>
+        <input type="text" /><br>
+        <input type="submit" value="Сохранить">
+    </form>
+</body>
+</html>
